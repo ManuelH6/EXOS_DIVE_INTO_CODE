@@ -93,27 +93,6 @@ ul.top_menu {
   overflow: scroll;
   line-height: 2;
 }
-.footer{
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  /* bottom: 0; */
-  background-color: #4D4D4D;
-  display: table;
-}
-.footer p {
-  font-size: 1rem;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  vertical-align: middle;
-  display: table-cell;
-}
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-}
 .banner_content {
   margin-top: 10px;
   display: table;
@@ -124,12 +103,29 @@ ul.top_menu {
 .banner_content p img {
   width: 100%;
 }
-.image_area {
-  width: 100%;
-}
 .side_menu .point{
   background-color: #FCECEC;
 }
 .side_menu .point a{
   color: #4D4D4D;
+}
+.footer{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  background-color: #4D4D4D;
+  display: table;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
