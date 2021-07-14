@@ -89,17 +89,14 @@ $(document).ready(function () {
   // Lorsque le bouton "juge final" (id="btn-declaration") est pressé, le processus de "function judgement()" est exécuté.
   // Lorsque le bouton "Juge final" est cliqué pour la deuxième fois ou plus, l'élément HTML du juge affiché jusqu'alors est supprimé, et un nouvel élément HTML du juge est ajouté.
   // Conseil : examinons la méthode de "remove"
+  var count = 1;
   $('#btn-declaration').click(function () {
-    $("#judge").text(judgement());
-  });
-  let count = 0;
-    $('#btn-declaration').click(function (){
-      count++;
+    if(count >= 2) {
+      $("#declaration").remove();
       $("#judge").text(judgement());
-      if(count >= 2) {
-        $("#declaration").remove();
-        $("#declaration").text(judgement());
-      }
-    });
+    }
+    $("#judge").text(judgement());
+    count++;
+  });
 });
 // Si vous souhaitez implémenter le JavaScript sans suivre la description, vous pouvez le faire comme vous le souhaitez. Si vous remplissez toutes les conditions, vous réussirez l'exercice.
