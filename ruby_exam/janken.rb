@@ -30,20 +30,22 @@ end
 class Janken
   def pon(player_hand, enemy_hand)
     # Remplacez ["goo", "choki", "par"] la variable "janken".
-
-
     janken = ["Goo", "Choki", "Par"]
     #「相手の手は#{相手の手}です。」と出力させます。
-    puts "La main de l'autre partie est #{janken[enemy_hand]}"
-    puts "Votre main est #{janken[player_hand]}"
-    ​
-    if (enemy_hand == player_hand)
+    if (player_hand == enemy_hand)
+      puts "La main de l'autre partie est #{janken[enemy_hand]}"
+      puts "Votre main est #{janken[player_hand]}"
       puts "Egalité"
-    elsif (player_hand == 0 && enemy_hand == 1) || (player_hand == 1 && enemy_hand == 2) || (player_hand == 2 && enemy_hand == 0)
+      return true
+    elsif ((player_hand == 0 && enemy_hand == 1) || (player_hand == 1 && enemy_hand == 2) || (player_hand == 2 && enemy_hand == 0))
+      puts "La main de l'autre partie est #{janken[enemy_hand]}"
+      puts "Votre main est #{janken[player_hand]}"
       puts "Vous avez gagné"
       return false;
     else
-      puts "Vous êtes entrain de perdre"
+      puts "La main de l'autre partie est #{janken[enemy_hand]}"
+      puts "Votre main est #{janken[player_hand]}"
+      puts "Vous etes entrain de perdre"
       return false;
     end
   end
